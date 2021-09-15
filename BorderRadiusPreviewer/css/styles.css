@@ -1,0 +1,128 @@
+:root {
+  --primary: #1FB2FE;
+  --secondary: #FE6B1F;
+  --tertiary: #FFBF9E;
+}
+
+html, body, .container {
+  width: 100%;
+  font-family: 'Azeret Mono', monospace;
+  background-color: var(--primary);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px 0px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #FFF;
+  padding-bottom: .7rem;
+  border-bottom: .2rem solid #FFF;
+  margin-bottom: 5rem;
+}
+
+.box-area {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.box-area__column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-area__column.box-area__column--left .input {
+  margin-right: .7rem;
+}
+
+.box-area__column.box-area__column--right .input {
+  margin-left: .7rem;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: var(--secondary);
+}
+
+.input {
+  width: 45px;
+  height: 25px;
+  text-align: center;
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  border: 1px solid var(--tertiary);
+  background: var(--tertiary);
+  color: #222222;
+  transition: border-color .2s;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+/* .output-area {} */
+
+.output {
+  display: block;
+  width: 400px;
+  height: 90px;
+  resize: none;
+  border: none;
+  background: #FFF;
+  margin: 0 auto;
+  padding: .7rem;
+  overflow: hidden;
+}
+
+.output:hover,
+.output:focus {
+  outline: none;
+}
+
+.output::selection {
+  color: #FFF;
+  background: var(--primary);
+}
+
+.copy {
+  width: 400px;
+  height: 40px;
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FFF;
+  background: var(--secondary);
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+}
+
+.copy__alert {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FFF;
+  background: var(--secondary);
+  padding: 20px;
+  transition: top .3s;
+}
